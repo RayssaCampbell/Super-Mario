@@ -12,42 +12,50 @@
     <title>Super Mario</title>
   </head>
   <body>
+
+    <div class="header">
+      <img src="img/mario-header.png">
+      <a>Home</a>
+      <a>Nossos Serviços</a>
+      <a>Fale Conosco</a>
+    </div>
+
+    <div class="caixa-mae">
+      
+      <div class="caixa-principal">
+        <img src="img/logo.png" alt="logo do super mario" class="logo-mario"/>
+        <p>Encanadores Mario e Luigi - Resolvendo Seus Problemas Com Estilo!</p>
+        <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos entupidos ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia! Apresentamos a vocês os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
+        <a class="link-whatsapp" href="https://wa.me/5532984576577?text=Quero+falar+com+os+irm%C3%A3os+Mario%21"><img src="img/whatsapp-png.png" alt="link para o whatsApp"></a>
+        <button onclick="cliqueiNoBotao()">Fale Conosco</button>
+      </div>
+  
+      <img src="img/mario.png" alt="logo mario e luigi" class="imagem-mario-luigi"/>
+
+    </div>
+
+
     <div class="caixa-video-mario">
       <video src="video/video.mp4" autoplay muted loop></video>
       <div class="mascara-video"></div>
     </div>
 
-    <div class="caixa-principal">
-      <img src="img/logo.png" alt="logo do super mario" class="logo-mario"/>
-      <p>Encanadores Mario e Luigi - Resolvendo Seus Problemas Com Estilo!</p>
-      <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos entupidos ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia! Apresentamos a vocês os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
-      <button onclick="cliqueiNoBotao()">Fale Conosco</button>
-    </div>
-
-    <img src="img/mario.png" alt="logo mario e luigi" class="imagem-mario-luigi"/>
-
-    <form class="fale-conosco">
-      <input placeholder="Seu nome" type="text"/>
-      <input placeholder="Seu telefone" type="tel"/>
-      <textarea placeholder="Digite seu problema aqui"></textarea>
-      <button onclick="sumirformalrio()">Enviar formulário</button>
+    
+    <form 
+    class="fale-conosco"
+    action="https://formcarry.com/s/aIV8C7ndz8K"
+    method="POST"
+    enctype="multipart/form-data">
+      <input placeholder="Seu nome" type="text" name="nome"/>
+      <input placeholder="Seu telefone" type="tel" name="telefone"/>
+      <textarea placeholder="Digite seu problema aqui" name="duvida"></textarea>
+      <button type="submit">Pedir Orçamento</button>
     </form>
 
-    <div class="mascara-form"></div>
+    <div class="mascara-form" onclick="esconderForm()"></div>
+
   </body>
-  <script>
-    let formulario = document.querySelector(".fale-conosco")
-    let mascara = document.querySelector("mascara-form")
 
-    function cliqueiNoBotao() {
-        formulario.style.left = "700px"
-        mascara.style.visibility = "visible"
-    }
+  <script src="scripts.js"></script>
 
-    function sumirformalrio() {
-    formulario.style.left = "-320px"
-    mascara.style.visibility = "hidden"
-    }
-
-  </script>
 </html>
